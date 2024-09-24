@@ -1,271 +1,361 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ProfileActivity">
+    android:id="@+id/drawer_layout">
 
     <!--Main Content -->
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="horizontal">
 
-        <!-- ActionBar -->
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolBar"
-            android:layout_width="match_parent"
-            android:layout_height="176dp"
-            android:background="@color/primaryColor"
-            android:elevation="4dp"
-            app:titleTextColor="@color/white"/>
-
-        <!--Scrollable Content-->
-        <ScrollView
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:padding="16dp">
+            android:orientation="vertical">
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center_horizontal">
+                android:layout_width="69dp"
+                android:layout_height="176dp"
+                android:background="@color/primaryColor"
+                android:orientation="vertical">
 
-                <!--Profile Image -->
-                <FrameLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content">
-
-                    <ImageView
-                        android:id="@+id/profile_image"
-                        android:layout_width="200dp"
-                        android:layout_height="200dp"
-                        android:src="@drawable/profileimg"
-                        android:contentDescription="Profile Picture"
-                        android:layout_gravity="center"
-                        android:background="@drawable/image_circular"
-                        android:scaleType="centerCrop"
-                        android:padding="4dp"/>
-                    <ImageView
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:layout_gravity="bottom|end"
-                        android:src="@drawable/editphoto"
-                        android:layout_margin="8dp"/>
-
-                </FrameLayout>
-
-                <!--Name and Ocupation-->
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="User name"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:layout_marginTop="8dp"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Ocupación"
-                    android:textSize="14sp"
-                    android:textStyle="bold"
-                    android:gravity="center"
-                    android:layout_gravity="center"
-                    android:layout_marginBottom="16dp"/>
-
-                <!--Divider-->
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Datos"
-                    android:textStyle="bold"
-                    android:background="@color/primaryColor"
-                    android:textColor="@color/white"
-                    android:textSize="16sp"
-                    android:padding="8dp"
-                    android:layout_marginTop="18dp"/>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="8dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Edad: "
-                        android:textColor="#666666"
-                        android:textStyle="bold"
-                        android:fontFamily="sans-serif-medium"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Ocupacion: "
-                        android:textStyle="bold"
-                        android:fontFamily="sans-serif-medium"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Experiencia: "
-                        android:textStyle="bold"
-                        android:fontFamily="sans-serif-medium"/>
-
-                </LinearLayout>
-                
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Temáticas"
-                    android:textStyle="bold"
-                    android:textSize="16sp"
-                    android:background="@color/primaryColor"
-                    android:textColor="@android:color/white"
-                    android:padding="8dp"
-                    android:layout_marginTop="18dp"/>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="8dp">
-
-                    <CheckBox
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Deportes" />
-
-                    <CheckBox
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Entretenimiento" />
-
-                    <CheckBox
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Tecnología" />
-
-                    <CheckBox
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Política" />
-
-                    <CheckBox
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Economía" />
-
-                    <CheckBox
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Salud" />
-
-                </LinearLayout>
-
-                <!-- Fuentes Section -->
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Fuentes"
-                    android:textStyle="bold"
-                    android:background="@color/primaryColor"
-                    android:textColor="@android:color/white"
-                    android:padding="8dp"
-                    android:textSize="16sp"
-                    android:layout_marginTop="16dp"/>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="8dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="El Espectador https://www.elespectador.com/"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="El Tiempo https://www.eltiempo.com/"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="CNN https://www.cnn.com/"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="CARACOL https://www.noticiascaracol.com/"/>
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="RCN https://www.canalrcn.com/"/>
-                </LinearLayout>
-
+                <ImageButton
+                    android:id="@+id/menu_hambuger_buttom"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="120dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:contentDescription="Home"
+                    android:src="@drawable/menu_hamburger"
+                    tools:ignore="TouchTargetSizeCheck" />
 
             </LinearLayout>
 
-        </ScrollView>
+            <com.google.android.material.navigation.NavigationView
+                android:id="@+id/navigation_view"
+                android:layout_width="69dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:background="@color/primaryColor"
+                android:fitsSystemWindows="true">
 
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageButton
+                        android:id="@+id/home_button"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="24dp"
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/buttom_circular"
+                        android:contentDescription="Home"
+                        android:padding="8dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/iconhome" />
+
+                    <ImageButton
+                        android:id="@+id/profile_button"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="24dp"
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/buttom_circular"
+                        android:contentDescription="Profile"
+                        android:padding="8dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/iconprofile" />
+
+                    <ImageButton
+                        android:id="@+id/photo_button"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="24dp"
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/buttom_circular"
+                        android:contentDescription="Photos"
+                        android:padding="8dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/iconphoto" />
+
+                    <ImageButton
+                        android:id="@+id/video_button"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="24dp"
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/buttom_circular"
+                        android:contentDescription="Video"
+                        android:padding="8dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/iconplay" />
+
+                    <ImageButton
+                        android:id="@+id/web_button"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="24dp"
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/buttom_circular"
+                        android:contentDescription="Web"
+                        android:padding="8dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/iconweb" />
+
+                </LinearLayout>
+
+            </com.google.android.material.navigation.NavigationView>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginStart="7dp"
+            android:layout_marginEnd="7dp">
+
+
+            <!--Header-->
+                <!--Profile Image -->
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="176dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:background="@color/primaryColor"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="PERFIL"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold"
+                            android:translationY="120dp"/>
+
+                        <FrameLayout
+                            android:layout_width="150dp"
+                            android:layout_height="150dp"
+                            android:translationY="140dp">
+
+                            <ImageView
+                                android:id="@+id/profile_image"
+                                android:layout_width="150dp"
+                                android:layout_height="150dp"
+                                android:layout_gravity="center|top"
+                                android:background="@drawable/image_circular"
+                                android:contentDescription="Profile Picture"
+                                android:elevation="8dp"
+                                android:src="@drawable/profileimg" />
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_gravity="bottom|end"
+                                android:layout_margin="8dp"
+                                android:src="@drawable/editphoto" />
+
+                        </FrameLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:text="Ocupación"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:layout_marginTop="120dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:gravity="center"
+                            android:text="User name"
+                            android:textSize="14sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:background="@color/primaryColor"
+                        android:padding="8dp"
+                        android:text="Datos"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="Edad: "
+                            android:textColor="#666666"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="Ocupacion: "
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-medium"
+                            android:text="Experiencia: "
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:background="@color/primaryColor"
+                        android:padding="8dp"
+                        android:text="Temáticas"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:minHeight="24dp"
+                            android:text="Deportes" />
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:minHeight="24dp"
+                            android:text="Entretenimiento"
+                            tools:ignore="TouchTargetSizeCheck" />
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:minHeight="24dp"
+                            android:text="Tecnología" />
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:minHeight="24dp"
+                            android:text="Política"
+                            tools:ignore="TouchTargetSizeCheck" />
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:minHeight="24dp"
+                            android:text="Economía" />
+
+                        <CheckBox
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:minHeight="24dp"
+                            android:text="Salud" />
+
+                    </LinearLayout>
+
+                    <!-- Fuentes Section -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/primaryColor"
+                        android:padding="8dp"
+                        android:text="Fuentes"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="El Espectador https://www.elespectador.com/" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="El Tiempo https://www.eltiempo.com/" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="CNN https://www.cnn.com/" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="CARACOL https://www.noticiascaracol.com/" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="RCN https://www.canalrcn.com/" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </ScrollView>
+
+
+        </LinearLayout>
 
     </LinearLayout>
 
     <!-- Navigation Drawer -->
-    <com.google.android.material.navigation.NavigationView
-        android:id="@+id/navigation_view"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="start"
-        android:fitsSystemWindows="true"
-        android:background="@color/menuButton">
-
-        <!-- Drawer menu with icons -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:gravity="center">
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/iconhome"
-                android:contentDescription="Home"/>
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/iconprofile"
-                android:contentDescription="Profile"/>
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/editphoto"
-                android:contentDescription="Photos"/>
-
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/iconplay"
-                android:contentDescription="Video"/>
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/iconweb"
-                android:contentDescription="Video"/>
-
-        </LinearLayout>
-
-    </com.google.android.material.navigation.NavigationView>
 
 
 </androidx.drawerlayout.widget.DrawerLayout>
