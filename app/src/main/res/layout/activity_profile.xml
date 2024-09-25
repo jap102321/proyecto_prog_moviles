@@ -30,7 +30,7 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="120dp"
                     android:background="?attr/selectableItemBackground"
-                    android:contentDescription="Home"
+                    android:contentDescription="menuHamburguer"
                     android:src="@drawable/menu_hamburger"
                     tools:ignore="TouchTargetSizeCheck" />
 
@@ -125,72 +125,82 @@
 
             <!--Header-->
                 <!--Profile Image -->
-                <FrameLayout
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp">
+
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="176dp">
+                    android:layout_height="176dp"
+                    android:background="@color/primaryColor"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:orientation="vertical"
-                        android:background="@color/primaryColor"
-                        android:gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PERFIL"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+/>
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="PERFIL"
-                            android:textColor="@color/white"
-                            android:textSize="18sp"
-                            android:textStyle="bold"
-                            android:translationY="120dp"/>
+                </LinearLayout>
 
-                        <FrameLayout
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
-                            android:translationY="140dp">
+                <FrameLayout
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center_horizontal"
+                    android:translationY="110dp"
+                    tools:ignore="VisualLintBounds">
 
-                            <ImageView
-                                android:id="@+id/profile_image"
-                                android:layout_width="150dp"
-                                android:layout_height="150dp"
-                                android:layout_gravity="center|top"
-                                android:background="@drawable/image_circular"
-                                android:contentDescription="Profile Picture"
-                                android:elevation="8dp"
-                                android:src="@drawable/profileimg" />
+                    <ImageView
+                        android:id="@+id/profile_image"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:layout_gravity="center|top"
+                        android:background="@drawable/image_circular"
+                        android:contentDescription="Profile Picture"
+                        android:elevation="8dp"
+                        android:src="@drawable/profileimg" />
 
-                            <ImageView
-                                android:layout_width="24dp"
-                                android:layout_height="24dp"
-                                android:layout_gravity="bottom|end"
-                                android:layout_margin="8dp"
-                                android:src="@drawable/editphoto" />
-
-                        </FrameLayout>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:gravity="center"
-                            android:text="Ocupación"
-                            android:textSize="14sp"
-                            android:textStyle="bold"
-                            android:layout_marginTop="120dp"/>
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="2dp"
-                            android:gravity="center"
-                            android:text="User name"
-                            android:textSize="14sp"
-                            android:textStyle="bold" />
-
-                    </LinearLayout>
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_gravity="bottom|end"
+                        android:layout_margin="8dp"
+                        android:src="@drawable/editphoto" />
 
                 </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center_vertical|center_horizontal"
+                    android:translationY="110dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="2dp"
+                        android:layout_gravity="center"
+                        android:text="User name"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="2dp"
+                        android:text="Ocupación"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </FrameLayout>
 
             <ScrollView
                 android:layout_width="match_parent"
@@ -265,7 +275,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:minHeight="24dp"
-                            android:text="Deportes" />
+                            android:text="Deportes"
+                            tools:ignore="TouchTargetSizeCheck" />
 
                         <CheckBox
                             android:layout_width="wrap_content"
@@ -278,7 +289,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:minHeight="24dp"
-                            android:text="Tecnología" />
+                            android:text="Tecnología"
+                            tools:ignore="TouchTargetSizeCheck" />
 
                         <CheckBox
                             android:layout_width="wrap_content"
@@ -291,13 +303,15 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:minHeight="24dp"
-                            android:text="Economía" />
+                            android:text="Economía"
+                            tools:ignore="TouchTargetSizeCheck" />
 
                         <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:minHeight="24dp"
-                            android:text="Salud" />
+                            android:text="Salud"
+                            tools:ignore="TouchTargetSizeCheck" />
 
                     </LinearLayout>
 
