@@ -16,6 +16,12 @@ import com.example.proyecto_poli.ui.theme.Proyecto_poliTheme
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+<<<<<<< HEAD
+        setContentView(R.layout.activity_main)
+
+    }
+}
+=======
         enableEdgeToEdge()
         setContent {
             Proyecto_poliTheme {
@@ -45,3 +51,4 @@ fun GreetingPreview() {
         Greeting("Android")
     }
 }
+>>>>>>> c5ac0a25b959531d5757e6cd870f6556bc8ba4fc
