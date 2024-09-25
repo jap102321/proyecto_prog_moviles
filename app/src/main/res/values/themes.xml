@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+<<<<<<< HEAD
     <style name="Theme.Proyecto_poli" parent="Theme.AppCompat.Light.DarkActionBar" />
+=======
+    <style name="Theme.Proyecto_poli" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Personaliza tu tema aquí -->
+    </style>
+>>>>>>> c5ac0a25b959531d5757e6cd870f6556bc8ba4fc
 </resources>
