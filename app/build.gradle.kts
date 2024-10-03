@@ -63,12 +63,10 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
-<<<<<<< HEAD
     implementation ("androidx.appcompat:appcompat:1.6.0")
     implementation ("com.google.android.material:material:1.9.0")
     implementation ("androidx.constraintlayout:constraintlayout:2.1.4")
-=======
->>>>>>> c5ac0a25b959531d5757e6cd870f6556bc8ba4fc
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -76,8 +74,7 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-<<<<<<< HEAD
-=======
+
     implementation("com.google.android.material:material:1.9.0")
->>>>>>> c5ac0a25b959531d5757e6cd870f6556bc8ba4fc
+
 }
