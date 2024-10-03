@@ -2,11 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
-<<<<<<< HEAD
-=======
     <uses-permission android:name="android.permission.INTERNET" />
 
->>>>>>> c5ac0a25b959531d5757e6cd870f6556bc8ba4fc
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -17,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Proyecto_poli"
         tools:targetApi="31">
-<<<<<<< HEAD
+
         <activity
             android:name=".ProfileActivity"
             android:exported="true">
@@ -30,24 +27,23 @@
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.Proyecto_poli">
+            android:theme="@style/Theme.Proyecto_poli"
+            tools:ignore="RedundantLabel">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-=======
 
-<!--            android:name=".MainActivityNew"-->
-        <!--activity
+        <activity
             android:name=".LoginNews"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity-->
+        </activity>
         <activity
             android:name=".WebView"
             android:exported="true">
@@ -68,7 +64,6 @@
 <!--            android:exported="false"-->
 <!--            android:theme="@style/Theme.Proyecto_poli" />-->
 
->>>>>>> c5ac0a25b959531d5757e6cd870f6556bc8ba4fc
     </application>
 
 </manifest>

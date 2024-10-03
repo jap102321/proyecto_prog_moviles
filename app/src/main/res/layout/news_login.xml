@@ -7,67 +7,105 @@
     android:orientation="horizontal">
 
     <LinearLayout
-        android:id="@+id/lateralNav"
-        android:layout_width="113dp"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:background="#535F83"
         android:orientation="vertical">
 
-        <ImageButton
-            android:id="@+id/menu"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:background="@null"
-            app:srcCompat="@drawable/ic_menu" />
-
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:gravity="center_vertical"
+            android:layout_width="69dp"
+            android:layout_height="176dp"
+            android:background="@color/primaryColor"
             android:orientation="vertical">
 
             <ImageButton
-                android:id="@+id/icon_home2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@null"
-                android:padding="20dp"
-                app:srcCompat="@drawable/ic_home" />
+                android:id="@+id/menu_hambuger_buttom"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="120dp"
+                android:background="?attr/selectableItemBackground"
+                android:contentDescription="menuHamburguer"
+                android:src="@drawable/menu_hamburger" />
 
-            <ImageButton
-                android:id="@+id/icon_profile2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@null"
-                android:padding="20dp"
-                app:srcCompat="@drawable/ic_profile" />
-
-            <ImageButton
-                android:id="@+id/icon_img2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@null"
-                android:padding="20dp"
-                app:srcCompat="@drawable/ic_photo" />
-
-            <ImageButton
-                android:id="@+id/icon_video2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@null"
-                android:padding="20dp"
-                app:srcCompat="@drawable/ic_video" />
-
-            <ImageButton
-                android:id="@+id/icon_web2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@null"
-                android:padding="20dp"
-                app:srcCompat="@drawable/ic_web" />
         </LinearLayout>
 
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigation_view"
+            android:layout_width="69dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:background="@color/primaryColor"
+            android:fitsSystemWindows="true">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="8dp">
+
+                <ImageButton
+                    android:id="@+id/home_button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="24dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/buttom_circular"
+                    android:contentDescription="Home"
+                    android:padding="8dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/iconhome" />
+
+                <ImageButton
+                    android:id="@+id/profile_button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="24dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/buttom_circular"
+                    android:contentDescription="Profile"
+                    android:padding="8dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/iconprofile" />
+
+                <ImageButton
+                    android:id="@+id/photo_button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="24dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/buttom_circular"
+                    android:contentDescription="Photos"
+                    android:padding="8dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/iconphoto" />
+
+                <ImageButton
+                    android:id="@+id/video_button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="24dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/buttom_circular"
+                    android:contentDescription="Video"
+                    android:padding="8dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/iconplay" />
+
+                <ImageButton
+                    android:id="@+id/web_button"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="24dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/buttom_circular"
+                    android:contentDescription="Web"
+                    android:padding="8dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/iconweb" />
+
+            </LinearLayout>
+
+        </com.google.android.material.navigation.NavigationView>
     </LinearLayout>
 
     <LinearLayout
@@ -152,7 +190,7 @@
             <CheckBox
                 android:id="@+id/checkBox"
                 android:layout_width="wrap_content"
-                android:layout_height="20dp"
+                android:layout_height="48dp"
                 android:text="Remember Me"
                 android:textSize="10sp" />
 
