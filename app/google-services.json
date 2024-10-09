@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "117636841698",
+    "project_id": "proyecto-movb01-grupo8",
+    "storage_bucket": "proyecto-movb01-grupo8.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:117636841698:android:b7020669bad6ad53241ebb",
+        "android_client_info": {
+          "package_name": "com.example.proyecto_poli"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDawxs1dVLFJ4rAHRtLYCvznI9TMEoP72k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

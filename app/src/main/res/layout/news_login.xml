@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F5F5F5"
     android:orientation="horizontal">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:visibility="gone" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -25,7 +34,8 @@
                 android:layout_marginTop="120dp"
                 android:background="?attr/selectableItemBackground"
                 android:contentDescription="menuHamburguer"
-                android:src="@drawable/menu_hamburger" />
+                android:src="@drawable/menu_hamburger"
+                tools:ignore="HardcodedText" />
 
         </LinearLayout>
 
@@ -44,7 +54,7 @@
                 android:padding="8dp">
 
                 <ImageButton
-                    android:id="@+id/home_button"
+                    android:onClick="home_button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_marginTop="24dp"
@@ -53,10 +63,11 @@
                     android:contentDescription="Home"
                     android:padding="8dp"
                     android:scaleType="centerInside"
-                    android:src="@drawable/iconhome" />
+                    android:src="@drawable/iconhome"
+                    tools:ignore="HardcodedText" />
 
                 <ImageButton
-                    android:id="@+id/profile_button"
+                    android:onClick="perfilBtn"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_marginTop="24dp"
@@ -65,7 +76,8 @@
                     android:contentDescription="Profile"
                     android:padding="8dp"
                     android:scaleType="centerInside"
-                    android:src="@drawable/iconprofile" />
+                    android:src="@drawable/iconprofile"
+                    tools:ignore="HardcodedText" />
 
                 <ImageButton
                     android:id="@+id/photo_button"
@@ -77,7 +89,8 @@
                     android:contentDescription="Photos"
                     android:padding="8dp"
                     android:scaleType="centerInside"
-                    android:src="@drawable/iconphoto" />
+                    android:src="@drawable/iconphoto"
+                    tools:ignore="HardcodedText" />
 
                 <ImageButton
                     android:id="@+id/video_button"
@@ -89,10 +102,11 @@
                     android:contentDescription="Video"
                     android:padding="8dp"
                     android:scaleType="centerInside"
-                    android:src="@drawable/iconplay" />
+                    android:src="@drawable/iconplay"
+                    tools:ignore="HardcodedText" />
 
                 <ImageButton
-                    android:id="@+id/web_button"
+                    android:onClick="web_button"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
                     android:layout_marginTop="24dp"
@@ -101,7 +115,8 @@
                     android:contentDescription="Web"
                     android:padding="8dp"
                     android:scaleType="centerInside"
-                    android:src="@drawable/iconweb" />
+                    android:src="@drawable/iconweb"
+                    tools:ignore="HardcodedText" />
 
             </LinearLayout>
 
@@ -121,7 +136,8 @@
             android:layout_height="300dp"
             android:scaleX="2"
             android:scaleY="2"
-            android:src="@drawable/iot_world" />
+            android:src="@drawable/iot_world"
+            tools:ignore="ContentDescription" />
 
         <LinearLayout
             android:id="@+id/inputs"
@@ -146,12 +162,14 @@
                     android:background="@drawable/edittext_border"
                     android:fontFamily="@font/roboto_bold"
                     android:hint="EMAIL"
-                    android:textSize="14dp"
                     android:inputType="textEmailAddress"
                     android:letterSpacing="0.2"
+                    android:minHeight="48dp"
                     android:padding="12dp"
                     android:textColor="#5A6978"
-                    android:textColorHint="#5A6978" />
+                    android:textColorHint="#5A6978"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText,VisualLintTextFieldSize" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -159,7 +177,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 app:endIconDrawable="@drawable/lock_alt_svgrepo_com"
-                app:endIconMode="password_toggle">
+                app:endIconMode="password_toggle"
+                app:passwordToggleEnabled="true">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/txtPass"
@@ -168,12 +187,14 @@
                     android:background="@drawable/edittext_border"
                     android:fontFamily="@font/roboto_bold"
                     android:hint="PASSWORD"
-                    android:textSize="14dp"
                     android:inputType="textPassword"
                     android:letterSpacing="0.2"
+                    android:minHeight="48dp"
                     android:padding="12dp"
                     android:textColor="#5A6978"
-                    android:textColorHint="#5A6978" />
+                    android:textColorHint="#5A6978"
+                    android:textSize="14sp"
+                    tools:ignore="HardcodedText,VisualLintTextFieldSize" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -184,23 +205,26 @@
             android:layout_height="wrap_content"
             android:gravity="center|clip_vertical"
             android:orientation="horizontal"
-            android:paddingTop="8dp"
-            android:paddingBottom="20dp">
+            android:paddingTop="4dp"
+            android:paddingBottom="8dp">
 
             <CheckBox
                 android:id="@+id/checkBox"
                 android:layout_width="wrap_content"
                 android:layout_height="48dp"
                 android:text="Remember Me"
-                android:textSize="10sp" />
+                android:textSize="11sp"
+                tools:ignore="HardcodedText" />
 
             <TextView
-                android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="end"
+                android:gravity="center"
+                android:minHeight="24dp"
+                android:onClick="ForgotPass"
                 android:text="Forgot Password?"
-                android:textSize="10sp" />
+                android:textSize="11sp"
+                tools:ignore="HardcodedText,TouchTargetSizeCheck" />
 
         </LinearLayout>
 
@@ -212,7 +236,8 @@
             android:orientation="vertical">
 
             <Button
-                android:id="@+id/login"
+                android:id="@+id/btnlogin"
+                android:onClick="login"
                 android:layout_width="200dp"
                 android:layout_height="wrap_content"
                 android:background="@drawable/button_login"
@@ -220,14 +245,18 @@
                 android:text="Login"
                 android:letterSpacing="0.2"
                 android:textColor="@color/white"
-                android:padding="16dp" />
+                android:padding="12dp"
+                tools:ignore="HardcodedText" />
 
             <TextView
                 android:id="@+id/link_create"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:text="Create Account" />
+                android:minHeight="48dp"
+                android:onClick="register"
+                android:text="Create Account"
+                tools:ignore="HardcodedText,TouchTargetSizeCheck" />
         </LinearLayout>
 
     </LinearLayout>

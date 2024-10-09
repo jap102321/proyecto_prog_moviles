@@ -1,6 +1,8 @@
 package com.example.proyecto_poli
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.ImageButton
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -18,5 +20,13 @@ class ProfileActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_profile)
 
+    }
+
+    fun home_button(view: View){
+        startActivity(Intent(this,LoginNews::class.java))
+    }
+
+    fun web_button(view: View){
+        startActivity(Intent(this,WebView::class.java))
     }
 }
