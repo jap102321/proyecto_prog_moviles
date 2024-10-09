@@ -1,6 +1,8 @@
 package com.example.proyecto_poli
 
+import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.webkit.WebSettings
 import androidx.appcompat.app.AppCompatActivity
 import android.webkit.WebView
@@ -35,5 +37,17 @@ class WebView: AppCompatActivity() {
         } else {
             super.onBackPressed()
         }
+    }
+
+    fun home_button(view: View){
+        startActivity(Intent(this,LoginNews::class.java))
+    }
+
+    fun perfilBtn(view: View){
+        startActivity(Intent(this,ProfileActivity::class.java))
+    }
+
+    fun web_button(view: View){
+        startActivity(Intent(this, com.example.proyecto_poli.WebView::class.java))
     }
 }

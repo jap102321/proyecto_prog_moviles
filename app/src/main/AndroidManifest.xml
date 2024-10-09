@@ -16,15 +16,7 @@
         tools:targetApi="31">
 
         <activity
-            android:name=".ProfileActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".MainActivity"
+            android:name=".LoginNews"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.Proyecto_poli"
@@ -35,35 +27,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity
-            android:name=".LoginNews"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".WebView"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-
-<!--        <activity-->
-<!--            android:name=".MainActivity"-->
-<!--            android:exported="false"-->
-<!--            android:label="@string/app_name"-->
-<!--            android:theme="@style/Theme.Proyecto_poli" />-->
-
-<!--        <activity-->
-<!--            android:name=".LoginNews"-->
-<!--            android:exported="false"-->
-<!--            android:theme="@style/Theme.Proyecto_poli" />-->
-
+        <activity android:name=".RegistroActivity" />
+        <activity android:name=".ProfileActivity"></activity>
+        <activity android:name=".WebView"></activity>
+        <activity android:name=".ForgotPassActivity"
+            android:exported="true"/>
     </application>
 
 </manifest>
