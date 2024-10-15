@@ -60,7 +60,8 @@
                         android:contentDescription="Home"
                         android:padding="8dp"
                         android:scaleType="centerInside"
-                        android:src="@drawable/iconhome" />
+                        android:src="@drawable/iconhome"
+                        tools:ignore="HardcodedText" />
 
                     <ImageButton
                         android:onClick="perfilBtn"
@@ -72,7 +73,8 @@
                         android:contentDescription="Profile"
                         android:padding="8dp"
                         android:scaleType="centerInside"
-                        android:src="@drawable/iconprofile" />
+                        android:src="@drawable/iconprofile"
+                        tools:ignore="HardcodedText" />
 
                     <ImageButton
                         android:id="@+id/photo_button"
@@ -108,7 +110,8 @@
                         android:contentDescription="Web"
                         android:padding="8dp"
                         android:scaleType="centerInside"
-                        android:src="@drawable/iconweb" />
+                        android:src="@drawable/iconweb"
+                        tools:ignore="HardcodedText" />
 
                 </LinearLayout>
 
@@ -164,11 +167,12 @@
                         android:elevation="8dp"
                         android:src="@drawable/profileimg" />
 
-                    <ImageView
+                    <ImageButton
+                        android:onClick="btnguardar_foto"
                         android:layout_width="24dp"
                         android:layout_height="24dp"
                         android:layout_gravity="bottom|end"
-                        android:layout_margin="8dp"
+                        android:layout_margin="12dp"
                         android:src="@drawable/editphoto" />
 
                 </FrameLayout>
@@ -178,25 +182,30 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:layout_gravity="center_vertical|center_horizontal"
-                    android:translationY="110dp">
+                    android:translationY="110dp"
+                    android:layout_marginTop="12dp">
 
                     <TextView
+                        android:id="@+id/perfil_name_user"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="2dp"
                         android:layout_gravity="center"
-                        android:text="User name"
+                        android:layout_marginTop="2dp"
+                        android:text="Nombre"
                         android:textSize="14sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        tools:ignore="TouchTargetSizeCheck" />
 
                     <TextView
+                        android:id="@+id/perfil_ocupacion_user"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginTop="2dp"
                         android:text="Ocupación"
                         android:textSize="14sp"
-                        android:textStyle="bold" />
+                        android:textStyle="bold"
+                        tools:ignore="TouchTargetSizeCheck" />
 
                 </LinearLayout>
 
@@ -227,30 +236,60 @@
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:padding="8dp">
+                        android:orientation="vertical">
 
-                        <TextView
-                            android:layout_width="wrap_content"
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fontFamily="sans-serif-medium"
-                            android:text="Edad: "
-                            android:textColor="#666666"
-                            android:textStyle="bold" />
+                            android:orientation="horizontal"
+                            android:padding="4dp">
 
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="sans-serif-medium"
-                            android:text="Ocupacion: "
-                            android:textStyle="bold" />
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="Edad: "
+                                android:textSize="16sp"
+                                android:textColor="#666666"
+                                android:textStyle="bold" />
 
-                        <TextView
-                            android:layout_width="wrap_content"
+                            <TextView
+                                android:id="@+id/perfil_edad_user"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="4dp"
+                                android:fontFamily="sans-serif-medium"
+                                android:textSize="16sp"
+                                android:text=""
+                                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:fontFamily="sans-serif-medium"
-                            android:text="Experiencia: "
-                            android:textStyle="bold" />
+                            android:orientation="horizontal"
+                            android:padding="4dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-medium"
+                                android:text="Experiencia: "
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+
+                            <TextView
+                                android:id="@+id/perfil_experiencia_user"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="sans-serif-medium"
+                                android:layout_marginHorizontal="4dp"
+                                android:text=""
+                                android:textSize="16sp"/>
+
+                        </LinearLayout>
 
                     </LinearLayout>
 
@@ -276,42 +315,42 @@
                             android:layout_height="wrap_content"
                             android:minHeight="24dp"
                             android:text="Deportes"
-                            tools:ignore="TouchTargetSizeCheck" />
+                            tools:ignore="HardcodedText,TouchTargetSizeCheck" />
 
                         <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:minHeight="24dp"
                             android:text="Entretenimiento"
-                            tools:ignore="TouchTargetSizeCheck" />
+                            tools:ignore="HardcodedText,TouchTargetSizeCheck" />
 
                         <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:minHeight="24dp"
                             android:text="Tecnología"
-                            tools:ignore="TouchTargetSizeCheck" />
+                            tools:ignore="HardcodedText,TouchTargetSizeCheck" />
 
                         <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:minHeight="24dp"
                             android:text="Política"
-                            tools:ignore="TouchTargetSizeCheck" />
+                            tools:ignore="HardcodedText,TouchTargetSizeCheck" />
 
                         <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:minHeight="24dp"
                             android:text="Economía"
-                            tools:ignore="TouchTargetSizeCheck" />
+                            tools:ignore="HardcodedText,TouchTargetSizeCheck" />
 
                         <CheckBox
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:minHeight="24dp"
                             android:text="Salud"
-                            tools:ignore="TouchTargetSizeCheck" />
+                            tools:ignore="HardcodedText,TouchTargetSizeCheck" />
 
                     </LinearLayout>
 
