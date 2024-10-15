@@ -25,7 +25,6 @@ class RegistroActivity : AppCompatActivity() {
     private lateinit var txtPassword: EditText
     private lateinit var progressBar: ProgressBar
     private lateinit var dbReference: DatabaseReference
-    private lateinit var database: FirebaseDatabase
     private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,10 +41,9 @@ class RegistroActivity : AppCompatActivity() {
 
         progressBar=findViewById(R.id.progressBarRegister)
 
-        database=FirebaseDatabase.getInstance()
         auth=FirebaseAuth.getInstance()
 
-        dbReference=database.reference.child("User")
+        dbReference=FirebaseDatabase.getInstance().getReference("Users")
 
 
     }
@@ -64,7 +62,7 @@ class RegistroActivity : AppCompatActivity() {
         val email:String=txtEmail.text.toString()
         val password:String=txtPassword.text.toString()
 
-        if(!TextUtils.isEmpty(name) && !TextUtils.isEmpty(lastName) && !TextUtils.isEmpty(edad) && !TextUtils.isEmpty(ocupacion) && !TextUtils.isEmpty(ocupacion) && !TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)){
+        if(!TextUtils.isEmpty(name) && !TextUtils.isEmpty(lastName) && !TextUtils.isEmpty(edad) && !TextUtils.isEmpty(ocupacion) && !TextUtils.isEmpty(experiencia) && !TextUtils.isEmpty(email) && !TextUtils.isEmpty(password)){
             progressBar.visibility=View.VISIBLE
 
             auth.createUserWithEmailAndPassword(email,password)
