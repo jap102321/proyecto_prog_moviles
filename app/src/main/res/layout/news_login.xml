@@ -110,6 +110,19 @@
                     android:src="@drawable/iconweb"
                     tools:ignore="HardcodedText" />
 
+                <ImageButton
+                    tools:ignore="HardcodedText"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="24dp"
+                    android:adjustViewBounds="true"
+                    android:background="@drawable/buttom_circular"
+                    android:contentDescription="Web"
+                    android:onClick="web_button"
+                    android:padding="8dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/news_icon" />
+
             </LinearLayout>
 
         </com.google.android.material.navigation.NavigationView>

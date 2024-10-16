@@ -3,14 +3,139 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="16dp">
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        tools:ignore="UselessParent">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
+            <LinearLayout
+                android:layout_width="69dp"
+                android:layout_height="176dp"
+                android:background="@color/primaryColor"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/menu_hambuger_buttom"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="120dp"
+                    android:background="?attr/selectableItemBackground"
+                    android:contentDescription="menuHamburguer"
+                    android:src="@drawable/menu_hamburger"
+                    tools:ignore="HardcodedText,TouchTargetSizeCheck" />
+
+            </LinearLayout>
+
+            <com.google.android.material.navigation.NavigationView
+                android:id="@+id/navigation_view"
+                android:layout_width="69dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:background="@color/primaryColor"
+                android:fitsSystemWindows="true">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="8dp">
+
+                    <ImageButton
+                        android:onClick="home_button"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="24dp"
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/buttom_circular"
+                        android:contentDescription="Home"
+                        android:padding="8dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/iconhome"
+                        tools:ignore="HardcodedText" />
+
+                    <ImageButton
+                        android:onClick="perfilBtn"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="24dp"
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/buttom_circular"
+                        android:contentDescription="Profile"
+                        android:padding="8dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/iconprofile"
+                        tools:ignore="HardcodedText" />
+
+                    <ImageButton
+                        android:id="@+id/photo_button"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="24dp"
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/buttom_circular"
+                        android:contentDescription="Photos"
+                        android:padding="8dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/iconphoto"
+                        tools:ignore="HardcodedText" />
+
+                    <ImageButton
+                        android:id="@+id/video_button"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="24dp"
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/buttom_circular"
+                        android:contentDescription="Video"
+                        android:padding="8dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/iconplay"
+                        tools:ignore="HardcodedText" />
+
+                    <ImageButton
+                        android:onClick="web_button"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="24dp"
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/buttom_circular"
+                        android:contentDescription="Web"
+                        android:padding="8dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/iconweb"
+                        tools:ignore="HardcodedText" />
+
+                    <ImageButton
+                        tools:ignore="HardcodedText"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="24dp"
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/buttom_circular"
+                        android:contentDescription="Web"
+                        android:onClick="web_button"
+                        android:padding="8dp"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/news_icon" />
+
+                </LinearLayout>
+
+            </com.google.android.material.navigation.NavigationView>
+        </LinearLayout>
 
     <LinearLayout
     android:orientation="horizontal"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingBottom="16dp">
+    android:padding="16dp"
+    >
 
 
         <ImageView
@@ -19,7 +144,7 @@
             android:layout_height="100dp"
             android:layout_marginEnd="16dp"
             android:scaleType="centerCrop"
-            android:src="@drawable/ic_launcher_background" />
+            android:src="@drawable/transmi_img" />
 
 
         <LinearLayout
@@ -32,7 +157,7 @@
                 android:id="@+id/news_title_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Título de la noticia 1"
+                android:text="[Noticias] Primer anuncio de los artistas que participarán en Rock al Parque"
                 android:textSize="18sp"
                 android:textStyle="bold"
                 android:textColor="@android:color/black" />
@@ -41,7 +166,7 @@
                 android:id="@+id/news_description_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Lorem ipsum"
+                android:text="El Instituto Distrital de las Artes - Idartes presenta el primer cartel de artistas que harán parte de la versión XXVIII de Rock al Parque,..."
                 android:layout_marginTop="8dp"
                 android:textSize="14sp"
                 android:textColor="@android:color/darker_gray" />
